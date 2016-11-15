@@ -42,16 +42,22 @@ tcl8.5-dev \
 tk-dev \
 tk8.5-dev \
 libfreenect-dev \
-libavcodec-extra-54 \
 libqt4-dev-bin \
-libusb-dev
-libavcodec-extra-53 \
+libusb-dev \
 libavdevice-dev \
 libavfilter-dev \
 libx264-dev
+
+case `lsb_release -r|awk '{print $2}'` in
+	'14.04')
+		sudo apt install -y libavcodec-extra-53 \
+			libavcodec-extra-54
+		;;
+esac
 
 # install google test
 cd /usr/src/gtest
 sudo cmake .
 sudo make
-sudo ln -s -f /usr/src/gtest/libgtest.a /home/lib/lib/
+mkdir -p ${HOME}/lib/lib
+sudo ln -s -f /usr/src/gtest/libgtest.a ${HOME}/lib/lib/
