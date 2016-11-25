@@ -50,8 +50,7 @@ UIC = uic-qt4
 YACC = bison -d
 
 ifndef MLR_LIBPATH
-#MLR_LIBPATH = /home/lib
-MLR_LIBPATH = $(HOME)/lib
+MLR_LIBPATH = /home/lib
 endif
 
 LINK	= $(CXX)
