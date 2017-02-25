@@ -1,0 +1,3 @@
+[submodule "kit/sicherheit/skript.tex"]
+	path = kit/sicherheit/skript.tex
+	url = https://github.com/skript-sicherheit/skript.git
